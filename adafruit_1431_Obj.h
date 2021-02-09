@@ -1,3 +1,6 @@
+#ifndef adafruit_1431_Obj_h
+#define adafruit_1431_Obj_h
+
 #include "displayObj.h"
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1351.h>
@@ -48,3 +51,5 @@ class adafruit_1431_Obj : public displayObj {
           byte              cs;
           byte              rst;
 };
+
+#endif
