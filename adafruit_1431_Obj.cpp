@@ -37,7 +37,7 @@ void adafruit_1431_Obj::setTextSize(byte inSize)          															{ theOL
 void adafruit_1431_Obj::setTextWrap(boolean wrap)         															{ theOLED->setTextWrap(wrap); }
 void adafruit_1431_Obj::setFont(const GFXfont* font) 																	{ theOLED->setFont(font); }
 void adafruit_1431_Obj::setCursor(int x,int y)        																{ theOLED->setCursor(gX(x),gY(y)); }
-void adafruit_1431_Obj::drawText(char* inText)            															{ theOLED->print(inText); }
+void adafruit_1431_Obj::drawText(const char* inText)            													{ theOLED->print(inText); }
 void adafruit_1431_Obj::fillScreen(colorObj* inColor)     															{ theOLED->fillScreen(inColor->getColor16());}
 void adafruit_1431_Obj::fillRect(int x,int y,int width,int height,colorObj* inColor)						{ theOLED->fillRect(gX(x),gY(y), width, height,inColor->getColor16()); }
 void adafruit_1431_Obj::fillRect(rect* aRect,colorObj* inColor)													{ theOLED->fillRect(gX(aRect->x),gY(aRect->y), aRect->width, aRect->height,inColor->getColor16()); }
