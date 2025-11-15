@@ -6,22 +6,15 @@
 #include <Adafruit_SSD1351.h>
 #include <LC_SPI.h>
 
-
-// Rotation
-#define PORTRAIT      0  // Wires up
-#define LANDSCAPE     1  // Wires left
-#define INV_PORTRAIT  2  // Wires down
-#define INV_LANDSCAPE 3  // Wires right
-
 class adafruit_1431_Obj : public displayObj {
 
   public :
   				adafruit_1431_Obj(byte inCS,byte inRST=-1);
   virtual	~adafruit_1431_Obj(void);
   
-	virtual 	bool	dispObjBegin(void);
   	virtual	int	width(void);
 	virtual	int	height(void);
+	virtual 	bool	begin(void);
 	virtual 	void	setRotation(byte inRotation);
 	virtual 	void	setTextColor(colorObj* tColor);
 	virtual 	void	setTextColor(colorObj* tColor,colorObj* bColor);
